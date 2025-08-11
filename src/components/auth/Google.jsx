@@ -49,8 +49,8 @@ export const useLoginWithGoogle = () => {
             body: JSON.stringify({
               username: user.displayName,
               email: user.email,
-              password: `${user.displayName}${import.meta.env.VITE_SECRET_KEY}`,
-              confirmed_password: `${user.displayName}${import.meta.env.VITE_SECRET_KEY}`
+              password: `${import.meta.env.VITE_SECRET_KEY}`,
+              confirmed_password: `${import.meta.env.VITE_SECRET_KEY}`
             })
           })
         
@@ -75,7 +75,7 @@ export const useLoginWithGoogle = () => {
                   },
                   body: JSON.stringify({
                     email: user.email,
-                    password: `${user.displayName}${import.meta.env.VITE_SECRET_KEY}`
+                    password: `${import.meta.env.VITE_SECRET_KEY}`
                   })
                 })
 
